@@ -1,0 +1,401 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+}
+a{
+	text-decoration: none;
+}
+/*nav的導航條*/
+nav{
+	width: 100%;
+	height: 80px;
+	/*固定定位 整個道航跟著頁面動*/
+	position: fixed;
+	left: 0;
+	top: 0; 
+	/*優先級*/
+	z-index: 999999;
+	background: white;
+}
+nav .content{
+	width: 1200px;
+	height: 80px;
+	/*background: yellow;*/
+	margin:0 auto;
+}
+nav .content p{
+	float: left;
+	line-height: 70px;
+	margin-right: 20px;
+	font-size:30px ;
+	font-family: arial;
+	color: #333333;
+}
+nav .content ul{
+	float: right;
+	width: 450px;
+	height: 80px;
+	/*background: pink;*/
+}
+nav .content ul li{
+	float: left;
+	line-height: 70px;
+	margin-right: 20px;
+	font-size:;
+	font-family: arial;
+	color: #333333;
+/*	background: red;*/
+	cursor: pointer;
+}
+
+header{
+	width: 100%;
+	height: 500px;
+	background: blue;
+	background-image: url(../img/6.jpg);
+	/*背景圖片不重複只顯示一張*/
+	background-repeat: no-repeat;
+	/*背景圖片居中*/
+	background-position: top ce1;
+	/*背景圖片根據框等比縮放*/
+	background-size:100% ;
+	background-attachment: fixed;
+	/*文檔流浮動*/
+	position: relative;
+}
+
+header .mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+header P{
+	width: 200px;
+	height: 200px;
+	/*下面四行是文字注釋*/
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	/*background: white;*/
+	/*下面6行代碼是讓一個元素在父元素中居中*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+header img{
+	/*动画*/
+	width: 70px;
+	height: 60px;
+	position: absolute;
+	top:350px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin:auto;
+	animation: move 1s infinite ;
+}
+@keyframes move{/*动画规则*/
+	0%{margin-top: 20px;}
+	50%{margin-top: 60px;}
+	100%{margin-top: 20px;}
+}
+/*professional skills*/
+.professional{
+	width: 100%;
+/*	background: white;*/
+
+}
+.professional h2{
+	width:100%;
+	height: 75px;
+	color: #333333;
+	/*居中*/text-align: center;
+	/*垂直居中*/line-height: 80px;
+	/*字體*/font-family: arial;
+}
+.professional .sanjiao{
+	width: 0;
+	height: 0;
+	border-bottom: 25px solid black;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 0;
+	margin: 0 auto;
+	margin-top: -10px;
+	
+}
+.professional .skills_box{
+	width: 100%;
+	/*此处需要加背景图片*/
+	background-image: url(../img/7.jpg);
+	/*background-color: blue;*/
+	
+}
+
+.professional .skills_box ul{
+	/*四个是放到有內宽的盒子中*/
+	width: 1200px;
+	/*background:green;*/
+	/*整个盒子居中*/
+	margin: 0 auto;
+	/*加了这条属性,浮动的父元素可以撑开自己*/
+	overflow: hidden;
+}
+.professional .skills_box ul li{
+	width: 225px;
+	height: 400px;
+	/*background: #123456;*/
+	float: left; 
+	margin-right: 100px;
+}
+.professional .skills_box ul li .icon{
+	width: 225px;
+	height: 225px;
+	border-radius: 50%;
+	/*园的颜色有透明度*/
+	background: rgba(158,104,102,0.65);
+	/*缩放0.85倍*/
+	transform: scale(0.85,0.85);
+	/*过度*/
+	transition: background 0.5s,transform 0.5s;
+	position: relative;
+}
+.professional .skills_box ul li img{
+	width: 100px;
+	position: absolute;
+	top: 60px;
+	left: 60px;
+}
+.professional .skills_box ul li:hover .icon{
+	/*鼠标移入li背景色变深 整个变大*/
+	background: rgba(158,104,102,1);
+	transform: scale(1,1);
+}
+.professional .skills_box ul li h4{
+	text-align: center;
+	color: #bbb;
+	margin-top: 20px;
+	transition: color 0.5s;
+}
+.professional .skills_box ul li:hover h4{
+	color:#000000;
+}
+.professional .skills_box ul li p{
+	color: #0000FF;
+	margin-top: 20px;
+	transition: color 0.5s;
+}
+.professional .skills_box ul li:hover p{
+	color:#000000;
+}
+
+  /*design works*/
+.design_box{
+	width: 1200px;
+	height: 770px;
+	/*background: pink;*/
+	margin: 0 auto;
+	/*整个块乡下移动20px*/
+	margin-top: 20px;
+}
+ .design_box h2{
+	width:100%;
+	height: 75px;
+	color: #333333;
+	/*居中*/text-align: center;
+	/*垂直居中*/line-height: 80px;
+	/*字體*/font-family: arial;
+}
+.design_box ul{
+	width: 100%;
+	height: 695px;
+	/*background:greenyellow ;*/
+	
+}
+.design_box ul li{
+	width: 330px;
+	height: 100%;
+	/*background: blueviolet;*/
+	float: left;
+	margin-right:105px;
+	position:relative;
+}
+.design_box ul li .dot{
+	width:10px;
+	height:10px;
+	background: #90291c;
+	border-radius:50%;
+	position:absolute;
+	top:10px;
+	left:160px;
+	display:none;
+}
+.design_box ul li h4{
+	width: 100%;
+	height: 30px;
+	/*文字居中*/text-align: center;
+	/*行高*/line-height: 30px;
+	color: #333333;
+	/*向下移动,避免盖住小点*/
+	margin-top: 30px;
+	
+}
+.design_box ul li .works{
+	width: 270px;
+	height: 270px;
+	background: black;
+	margin: 0 auto;
+	margin-top: 30px;
+	border-radius: 20px;
+	/*溢出的部分影藏*/
+	overflow: hidden·;
+	/*鼠标移入手型*/
+	cursor: pointer;
+	
+}
+.design_box ul li .works img{
+	transition:transform 0.5s;
+}
+.design_box ul li .works:hover img{
+	/*鼠标移入放大1.2倍*/
+	transform: scale(1.2,1.2);
+}
+.design_box ul li a{
+	color: #8f2525;
+	float: right;
+	margin-top: 15px;
+
+}
+	/*<!--SOFTWARE SKILLS-->*/
+.software{
+	width:100%;
+	height:450px;
+	background:#555;	
+}	
+.software h2{
+	width:100%;
+	height: 75px;
+	color: #333333;
+	/*居中*/text-align: center;
+	/*垂直居中*/line-height: 180px;
+	/*字體*/font-family: arial;
+	margin-top: ;
+}
+.software ul{
+	width: 1200px;
+	height: 220px;
+/*	background: #abcdef;*/
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.software ul li{
+	width: 140px;
+	height: 100%;
+	margin-right: 72px;
+	/*background: #654321;*/
+	float: left;
+	cursor: pointer;
+	
+}
+.software ul li .rotate{
+	width: 140px;
+	height: 140px;
+	background: black;
+	margin: 0 auto;
+	margin-top: 30px;
+	border-radius: 20px;
+	/*溢出的部分影藏*/
+	overflow: hidden;
+	/*鼠标移入手型*/
+	cursor: pointer;
+	transition: transform 0.5s;
+	border-radius:50%;
+	position: relative;
+}
+.software ul li .rotate:hover{
+	transform: rotateY(360deg);		
+}
+.software ul li .rotate img{
+	width: 100px;
+	position: absolute;
+	top: 10px;
+	left:10px;
+}
+.software ul li h3{
+	width:100%;
+	height:30px;
+	line-height:40px;
+	text-align:center;
+	color: #e05849;
+	
+}
+footer{
+	width: 100%;
+	/*height: 450px;*/
+	padding-bottom:80px ;
+	background: #eaeaea;
+	margin-top:130px;
+	border-top: 1px solid #eaeaea;
+}
+footer .self{
+	width: 100px;
+	height: 100px;
+	border:3px solid red;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: -50px;
+	overflow:hidden;
+}
+footer .content{
+	font-size: 18px;
+	color: #999;
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 1.5em;
+}
+footer h3{
+	width: 100%;
+	text-align: center;
+	color:#8d2820 ;
+	margin-top: 30px;
+}
+footer ul{
+	width:800px;
+	height: 180px;
+	margin: 0 auto;
+	margin-top: 20px;
+	/*background: black;*/
+}
+footer ul li{
+	width:200px;
+	height: 100%;
+	float: left;
+	/*background: red;*/
+}
+footer ul li div{
+	width: 100px;
+	height: 100px;
+	background:#a7a7a7;
+	margin: 0 auto;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 90px;
+	color: white;
+}
+footer ul li p{
+	font-size: 18px;
+	color: #999;
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+
